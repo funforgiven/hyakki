@@ -1,6 +1,18 @@
 creation_rules:
-  - path_regex: kubernetes/*.yaml
+  - path_regex: kubernetes/.*.yaml
     encrypted_regex: ^(data|stringData)$
     pgp: >-
       37C82A9F9729F26292B55457A739B3A50665550D,
       068382D98F71FBEB7C69914216CB781855D123B0
+
+  - path_regex: talosconfig
+    encrypted_regex: ^key$
+    pgp: 068382D98F71FBEB7C69914216CB781855D123B0
+
+  - path_regex: kubeconfig
+    encrypted_regex: ^client-key-data$
+    pgp: 068382D98F71FBEB7C69914216CB781855D123B0
+
+  - path_regex: secrets.yaml
+    encrypted_regex: ^(secret|bootstraptoken|secretboxencryptionsecret|token|key)$
+    pgp: 068382D98F71FBEB7C69914216CB781855D123B0
