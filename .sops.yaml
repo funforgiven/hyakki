@@ -1,0 +1,6 @@
+creation_rules:
+  - path_regex: kubernetes/*.yaml
+    encrypted_regex: ^(data|stringData)$
+    pgp: >-
+      37C82A9F9729F26292B55457A739B3A50665550D,
+      068382D98F71FBEB7C69914216CB781855D123B0
