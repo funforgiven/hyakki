@@ -4,9 +4,10 @@ metadata:
   name: cilium
   namespace: flux-system
 spec:
-  interval: 10m0s
-  path: ./kubernetes/infrastructure/cilium
+  interval: 1h
+  path: ./kubernetes/apps/kube-system/cilium/app
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
+  targetNamespace: kube-system
