@@ -20,6 +20,8 @@ spec:
       retries: 3
   values:
     cephClusterSpec:
+      mon:
+        count: 1
       storage:
         useAllNodes: true
         deviceFilter: "^nvme\\d+n\\d+$"
